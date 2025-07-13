@@ -7,12 +7,17 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const BuyCredit = () => {
-  const { user, backendurl, loadCreditData, token, setShowLogin } =
+  const { user, backendurl, loadCreditsData, token, setShowLogin } =
     useContext(Appcontext);
 
   const navigate = useNavigate();
 
   const initPay = async (order) => {
+    if (typeof window.Razorpay === "undefined") {
+      toast.error("Razorpay SDK not loaded");
+      return;
+    }
+
     const options = {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount: order.amount,
@@ -22,7 +27,27 @@ const BuyCredit = () => {
       order_id: order.id,
       receipt: order.receipt,
       handler: async (response) => {
-        console.log(response);
+        try {
+          const verifyData = {
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_signature: response.razorpay_signature,
+          };
+
+          const { data } = await axios.post(
+            backendurl + "/api/user/verify-razor",
+            verifyData,
+            { headers: { token } }
+          );
+
+          if (data.success) {
+            loadCreditsData();
+            navigate("/");
+            toast.success("Credit Added");
+          }
+        } catch (error) {
+          toast.error(error.message);
+        }
       },
     };
 
@@ -34,13 +59,15 @@ const BuyCredit = () => {
     try {
       if (!user) {
         setShowLogin(true);
+        return;
       }
 
-      const data = await axios.post(
+      const { data } = await axios.post(
         backendurl + "/api/user/pay-razor",
         { planId },
         { headers: { token } }
       );
+      console.log("Backend response:", data);
 
       if (data.success) {
         initPay(data.order);
@@ -75,7 +102,7 @@ const BuyCredit = () => {
             <p className="mt-3 mb-1 font-semibold">{item.id}</p>
             <p className="text-sm">{item.desc}</p>
             <p className="mt-6">
-              <span className="text-3xl font-medium">${item.price}</span> /{" "}
+              <span className="text-3xl font-medium">₹{item.price}</span> /{" "}
               {item.credits} credits
             </p>
 
