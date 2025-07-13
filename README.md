@@ -31,8 +31,8 @@
 - **Payments:** Razorpay
 - **Others:** Axios, Multer
 
-📁 Project Folder Structure – Imagify
-bash
+<details> <summary>📁 Project Folder Structure – <code>Imagify</code></summary>
+plaintext
 Copy
 Edit
 Imagify/
@@ -63,7 +63,7 @@ Imagify/
 │   └── README.md            # Optional backend-specific README
 │
 └── README.md                # Main project README (root level)
-
+</details>
 
 ## 📂 Setup Instructions
 
