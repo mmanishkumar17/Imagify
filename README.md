@@ -86,11 +86,12 @@ Thanks to OpenAI and Razorpay for APIs
 # Imagify
  Imagify is an animated AI text-to-image generator. ✨ Login to get 5 free credits 🎁, enter a prompt 📝, and generate stunning images 🎨. Recharge credits via Razorpay 💳 with 5 flexible plans 🔁. Fast, fun, and beautifully designed! 🚀
 
+**✨ Live Preview Available! ✨  
+You can preview this website—just click the link below to see the magic unfold! 🎨🚀  
+We've hosted it online so you don’t have to clone or set up anything locally. 🌐  
+Whether you're here to explore its features, design, or performance, this live link will give you the full experience.  
+Perfect for demos, testing, or just showing off! 😄💻  
+👉 [Click here to see the magic! 🧙‍♂️🪄](https://imagify-frontend-fn6o.onrender.com)  
+Give it a try and let the creativity flow. 🔮  
+Your feedback and stars are always appreciated! ⭐🙌**
 
-✨ Live Preview Available! ✨
-Want to see Imagify in action? 🚀 Just click the link below and experience the magic for yourself! 🎨🖼️
-You can preview this website effortlessly—no setup required. Whether you're here to explore, test, or just curious, we've made it easy for you to dive in. 🌐✨
-👉 Click here to see the magic! 🧙‍♂️🪄
-It's a smooth, responsive, and visually delightful platform made with love and code. ❤️💻
-Don't forget to share your thoughts or contribute! 🤝🌟
-Happy Imagifying! 🔮🖌️
