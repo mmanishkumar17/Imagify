@@ -31,6 +31,40 @@
 - **Payments:** Razorpay
 - **Others:** Axios, Multer
 
+📁 Project Folder Structure – Imagify
+bash
+Copy
+Edit
+Imagify/
+├── client/                  # Frontend
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/                 # React components & logic
+│   ├── .env                 # Frontend environment variables
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── README.md            # Optional frontend-specific README
+│   └── vite.config.js
+│
+├── server/                  # Backend
+│   ├── config/              # DB config or other setup files
+│   ├── controllers/         # Request handlers
+│   ├── middlewares/         # Custom middlewares (e.g., auth)
+│   ├── models/              # Mongoose models
+│   ├── node_modules/
+│   ├── routes/              # Express routes
+│   ├── .env                 # Backend environment variables
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── server.js            # Entry point for Express app
+│   └── README.md            # Optional backend-specific README
+│
+└── README.md                # Main project README (root level)
+
+
 ## 📂 Setup Instructions
 
 ```bash
