@@ -2,7 +2,7 @@
 
 **Imagify** is a beautifully animated 🌈 AI-powered web app that turns your text prompts 📝 into stunning images 🎨 in seconds!
 
-## ✨ Features
+## ✨ Featuresc
 - 🔡 Text-to-image AI generation
 - 🎬 Smooth animated user interface
 - 🎁 Get **5 free credits** on login
@@ -48,3 +48,6 @@ RAZORPAY_KEY_SECRET=your_key_secret
 🙌 Credits
 Built with ❤️ by Manish Mumar M
 Thanks to OpenAI and Razorpay for APIs
+=======
+# Imagify
+ Imagify is an animated AI text-to-image generator. ✨ Login to get 5 free credits 🎁, enter a prompt 📝, and generate stunning images 🎨. Recharge credits via Razorpay 💳 with 5 flexible plans 🔁. Fast, fun, and beautifully designed! 🚀
